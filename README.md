@@ -12,7 +12,7 @@ Synced automatically by SolveBase.
 
 ## Codeforces
 
-Solutions by [Codeforces](https://codeforces.com/profile/), organized by difficulty rating.
+Solutions by [en-variant](https://codeforces.com/profile/en-variant), organized by difficulty rating.
 
 **Solved: 0**
 
