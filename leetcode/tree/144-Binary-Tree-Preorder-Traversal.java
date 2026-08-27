@@ -13,18 +13,37 @@
  *     }
  * }
  */
+
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
-        recursion(root, list);
+        Stack<TreeNode> st = new Stack<>();
+        if(root == null) return list;
+        TreeNode node = root;
+        st.push(root);
+        while(!st.isEmpty()){
+            node = st.pop();
+            list.add(node.val);
+            if(node.right != null) st.push(node.right);
+            if(node.left != null) st.push(node.left);
+        }
         return list;
     }
-
-    public void recursion(TreeNode root, List<Integer> list){
-        if(root == null) return;
-
-        list.add(root.val);
-        recursion(root.left, list);
-        recursion(root.right, list);
-    }
 }
+
+// Recursive method
+// class Solution {
+//     public List<Integer> preorderTraversal(TreeNode root) {
+//         List<Integer> list = new ArrayList<>();
+//         recursion(root, list);
+//         return list;
+//     }
+
+//     public void recursion(TreeNode root, List<Integer> list){
+//         if(root == null) return;
+
+//         list.add(root.val);
+//         recursion(root.left, list);
+//         recursion(root.right, list);
+//     }
+// }
